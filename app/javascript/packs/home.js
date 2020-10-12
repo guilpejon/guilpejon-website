@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var _CONTENT = [
     "Developer",
     "Designer",
-    "Teacher",
+    "Writer",
+    "Youtuber",
     "Musician"
   ];
 
