@@ -250,12 +250,16 @@ button:focus {
     display: none;
 }
 
+.stickyadd .navbar-brand {
+  color: #000 !important;
+}
+
 .logo .logo-dark {
     display: none;
 }
 
 .custom-nav .navbar-brand {
-    color: #fff !important;
+    color: #fff;
     text-transform: uppercase;
 }
 
