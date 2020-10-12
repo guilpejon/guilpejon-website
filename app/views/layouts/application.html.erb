@@ -5,12 +5,14 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= render 'layouts/head' %>
+
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= render 'layouts/navbar' %>
+    <%# <%= render 'layouts/navbar' %1> %>
     <%= yield %>
   </body>
 </html>

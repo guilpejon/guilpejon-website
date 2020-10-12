@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   // List of sentences
   var _CONTENT = [
-    "Twinkle, twinkle, little star",
-    "How I wonder what you are",
-    "Up above the world so high",
-    "Like a diamond in the sky"
+    "Developer",
+    "Designer",
+    "Teacher",
+    "Musician"
   ];
 
   // Current sentence being processed
@@ -32,12 +32,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // If full sentence has been displayed then start to delete the sentence after some time
     if(text === _CONTENT[_PART]) {
       // Hide the cursor
-      _CURSOR.style.display = 'none';
+      // _CURSOR.style.display = 'none';
 
       clearInterval(_INTERVAL_VAL);
       setTimeout(function() {
-        _INTERVAL_VAL = setInterval(Delete, 50);
-      }, 1000);
+        _INTERVAL_VAL = setInterval(Delete, 75);
+      }, 2000);
     }
   }
 
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       setTimeout(function() {
         _CURSOR.style.display = 'inline-block';
         _INTERVAL_VAL = setInterval(Type, 100);
-      }, 200);
+      }, 500);
     }
   }
 
