@@ -1,0 +1,43 @@
+.navbar {
+	font-family: 'Montserrat', sans-serif;
+	margin: 1em 0;
+	border: none;
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    background-color: white;
+		color: black;
+}
+
+.navbar-default {
+	.navbar-brand,
+	.navbar-nav>li>a {
+    color: black;
+
+	}
+	.navbar-brand {
+    @include font-size(22px);
+		font-weight: 700;
+		letter-spacing: 1px;
+	}
+}
+
+.container-fluid {
+	background-color: #fff;
+}
+
+.navbar-toggler {
+  font-size: 1rem;
+	border: none;
+}
+
+.navbar-default .navbar-toggler:focus, .navbar-default .navbar-toggler:hover {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-toggler .icon-bar {
+    background-color: black;
+}
