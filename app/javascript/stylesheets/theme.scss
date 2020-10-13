@@ -223,14 +223,17 @@ button:focus {
 }
 
 .custom-nav .navbar-nav li a {
-    color: #fff !important;
+    color: #fff;
     font-size: 15px;
     background-color: transparent !important;
     margin: 0 7px;
     letter-spacing: 0.05em;
     line-height: 24px;
-    transition: all 0.5s;
+    transition: all 0.25s;
     font-weight: 500;
+    &:hover {
+      color: orange;
+    }
 }
 
 .custom-nav .navbar-brand .logo-light,
