@@ -125,6 +125,10 @@ button:focus {
         2.HELPER
 ============================*/
 
+a:hover {
+  color: orange;
+}
+
 .section {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -232,7 +236,7 @@ button:focus {
     transition: all 0.25s;
     font-weight: 500;
     &:hover {
-      color: orange;
+      color: orange !important;
     }
 }
 
@@ -279,13 +283,52 @@ button:focus {
 }
 
 .custom-nav.stickyadd .navbar-nav li a {
-    color: #000 !important;
+    color: #000;
 }
 
 
 /*===========================
         4.HOME
 =============================*/
+
+// .text-custom,
+// .custom-nav .navbar-nav li a:hover,
+// .custom-nav .navbar-nav li a:active,
+// .custom-nav .navbar-nav li.active a,
+// .custom-nav.stickyadd .navbar-nav li a:hover,
+// .custom-nav.stickyadd .navbar-nav li a:active,
+// .custom-nav.stickyadd .navbar-nav li.active a,
+// .about-social li a:hover {
+//     color:  !important;
+// }
+
+.btn-custom,
+.form-kerri .form-control:focus,
+.about-social li a:hover {
+    border-color: #e65f78;
+}
+
+.btn-custom,
+.back_top,
+.services-boxes .services-title-border,
+.owl-theme .owl-controls .owl-page span,
+.work_menu a.active,
+.work_menu a:hover {
+    background-color: orange; // #e65f78;
+}
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active,
+.btn-custom.focus,
+.btn-custom:active,
+.btn-custom:focus,
+.btn-custom:hover,
+.open > .dropdown-toggle.btn-custom {
+    background-color: #d8576f;
+    border-color: #d8576f;
+}
 
 .header-bg-img {
     // background-image: url('/assets/bridge.jpg');
@@ -512,10 +555,10 @@ button:focus {
 
 .work_menu a.active,
 .work_menu a:hover {
-    color: #fff !important;
+    color: #fff;
 }
 
-.work_item {
+.grid-item {
     position: relative;
     padding: 15px;
 }
@@ -662,7 +705,6 @@ button:focus {
 
 @media (min-width: 200px) and (max-width: 768px) {
     .custom-nav {
-        background-color: #fff !important;
         padding: 10px 0px !important;
     }
     .custom-nav .container {
@@ -676,8 +718,11 @@ button:focus {
     .custom-nav .logo .logo-dark {
         display: inline-block;
     }
+    .navbar-expand-lg {
+      padding: 20px 0px !important;
+    }
     .custom-nav .navbar-nav li a {
-        color: rgba(0, 0, 0, 0.6) !important;
+        // color: rgba(0, 0, 0, 0.6) !important;
     }
     .custom-nav .logo .logo-light {
         display: none;

@@ -50,111 +50,30 @@
 </section>
 
 
-<section class="section text-center" id="work">
+<section class="section text-center" id="art">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-12">
         <div class="text-center">
-          <h2>Our <span class="font-weight-bold">Works</span></h2>
-          <p class="text-muted mx-auto section-subtitle mt-3">It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
+          <h2>Digital Images</h2>
+          <p class="text-muted mx-auto section-subtitle mt-3">You can download the images below to use as wallpapers.<br> Alternatively, you can buy some of them as canvas <a href="#"><u>here</u></a>.</p>
         </div>
       </div>
     </div>
-    <div class="row mt-5 ">
-      <ul class="col list-unstyled list-inline mb-0 text-uppercase work_menu" id="menu-filter">
-        <li class="list-inline-item"><a class="active" data-filter="*">All</a></li>
-        <li class="list-inline-item"><a class="" data-filter=".seo">Seo</a></li>
-        <li class="list-inline-item"><a class="" data-filter=".webdesign">Webdesign</a></li>
-        <li class="list-inline-item"><a class="" data-filter=".WORK">WORK</a></li>
-        <li class="list-inline-item"><a class="" data-filter=".wordpress">Wordpress</a></li>
+    <div class="row mt-2">
+      <ul class="col list-unstyled list-inline mb-0 text-uppercase work_menu" id="image-orientation-filters">
+        <%# <li class="list-inline-item"><a class="active" data-filter="*">All</a></li> %>
+        <li class="list-inline-item"><a class="" data-filter=".portrait">Portrait</a></li>
+        <li class="list-inline-item"><a class="" data-filter=".landscape">Landscape</a></li>
       </ul>
     </div>
-  </div>
-  <div class="container">
-    <div class="row mt-4 work-filter" style="position: relative; height: 526.376px;">
-      <div class="col-lg-4 work_item webdesign wordpress" style="position: absolute; left: 0px; top: 0px;">
-        <a href="images/works/1.jpg" class="img-zoom">
-          <div class="work_box">
-            <div class="work_img">
-              <img src="images/works/1.jpg" class="img-fluid mx-auto d-block rounded" alt="work-img">
-            </div>
-            <div class="work_detail">
-              <p class="mb-2">Category</p>
-              <h4 class="mb-0">Project Title</h4>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-lg-4 work_item WORK webdesign seo" style="position: absolute; left: 380px; top: 0px;">
-        <a href="images/works/2.jpg" class="img-zoom">
-          <div class="work_box">
-            <div class="work_img">
-              <img src="images/works/2.jpg" class="img-fluid mx-auto d-block rounded" alt="work-img">
-            </div>
-            <div class="work_detail">
-              <p class="mb-2">Category</p>
-              <h4 class="mb-0">Project Title</h4>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-lg-4 work_item seo wordpress" style="position: absolute; left: 760px; top: 0px;">
-        <a href="images/works/3.jpg" class="img-zoom">
-          <div class="work_box">
-            <div class="work_img">
-              <img src="images/works/3.jpg" class="img-fluid mx-auto d-block rounded" alt="work-img">
-            </div>
-            <div class="work_detail">
-              <p class="mb-2">Category</p>
-              <h4 class="mb-0">Project Title</h4>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-lg-4 work_item wordpress WORK webdesign" style="position: absolute; left: 0px; top: 263px;">
-        <a href="images/works/4.jpg" class="img-zoom">
-          <div class="work_box">
-            <div class="work_img">
-              <img src="images/works/4.jpg" class="img-fluid mx-auto d-block rounded" alt="work-img">
-            </div>
-            <div class="work_detail">
-              <p class="mb-2">Category</p>
-              <h4 class="mb-0">Project Title</h4>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-lg-4 work_item seo webdesign" style="position: absolute; left: 380px; top: 263px;">
-        <a href="images/works/5.jpg" class="img-zoom">
-          <div class="work_box">
-            <div class="work_img">
-              <img src="images/works/5.jpg" class="img-fluid mx-auto d-block rounded" alt="work-img">
-            </div>
-            <div class="work_detail">
-              <p class="mb-2">Category</p>
-              <h4 class="mb-0">Project Title</h4>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-lg-4 work_item devlopment webdesign" style="position: absolute; left: 760px; top: 263px;">
-        <a href="images/works/6.jpg" class="img-zoom">
-          <div class="work_box">
-            <div class="work_img">
-              <img src="images/works/6.jpg" class="img-fluid mx-auto d-block rounded" alt="work-img">
-            </div>
-            <div class="work_detail">
-              <p class="mb-2">Category</p>
-              <h4 class="mb-0">Project Title</h4>
-            </div>
-          </div>
-        </a>
-      </div>
+    <div class="grid no-gutters">
+      <% @images.each do |image| %>
+        <%= link_to url_for(image.file), class: "col-lg-4 col-md-4 col-6 grid-item #{image.orientation}", data: { toggle: "lightbox", gallery: "photomanipulation-gallery", footer: "<a href='#{rails_blob_path(image.file, disposition: 'attachment')}' class='image-download-btn' title='Download'><i class='download-icon fa fa-2x fa-download'></i></a>" } do %>
+          <%= image_tag(image.file.variant(resize_to_fill: [500, 500]), class: " img-thumbnail") %>
+          <div class="gallery-image-item-overlay"></div>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </section>

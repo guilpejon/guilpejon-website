@@ -6,6 +6,8 @@ environment.plugins.append(
   new webpack.ProvidePlugin({
     $: 'jquery',
     jQuery: 'jquery',
+    Isotope: 'isotope-layout',
+    imagesLoaded: 'imagesloaded',
     Popper: ['popper.js', 'default']
   })
 )
