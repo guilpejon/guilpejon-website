@@ -1,0 +1,27 @@
+<section class="section text-center" id="art">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="text-center">
+          <h2>Digital Images</h2>
+          <p class="text-muted mx-auto section-subtitle mt-3">You can download the images below to use as wallpapers.<br> Alternatively, you can buy some of them as canvas <a href="#"><u>here</u></a>.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <ul class="col list-unstyled list-inline mb-0 text-uppercase work_menu" id="image-orientation-filters">
+        <%# <li class="list-inline-item"><a class="active" data-filter="*">All</a></li> %>
+        <li class="list-inline-item"><a class="" data-filter=".portrait">Portrait</a></li>
+        <li class="list-inline-item"><a class="" data-filter=".landscape">Landscape</a></li>
+      </ul>
+    </div>
+    <div class="grid no-gutters">
+      <% @images.each do |image| %>
+        <%= link_to url_for(image.file.variant(resize_to_fill: [1000,0])), class: "col-lg-4 col-md-4 col-6 grid-item #{image.orientation}", data: { toggle: "lightbox", gallery: "photomanipulation-gallery", footer: "<a href='#{rails_blob_path(image.file, disposition: 'attachment')}' class='image-download-btn' title='Download'><i class='download-icon fa fa-2x fa-download'></i></a>" } do %>
+          <%= image_tag(image.file.variant(resize_to_fill: [360, 360]), class: " img-thumbnail") %>
+          <div class="gallery-image-item-overlay"></div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</section>

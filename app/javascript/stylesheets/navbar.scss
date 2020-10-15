@@ -41,3 +41,11 @@
 .navbar-default .navbar-toggler .icon-bar {
     background-color: black;
 }
+
+@media (min-width: 200px) and (max-width: 991px) {
+  .navbar-collapse.collapse.show, .navbar-collapse.collapsing{
+    .navbar-nav {
+      margin-top: 1rem;
+    }
+  }
+}
