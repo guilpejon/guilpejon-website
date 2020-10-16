@@ -15,10 +15,13 @@ ActiveAdmin.register Article do
   filter :created_at
 
   form do |f|
-    f.inputs do
+    f.inputs 'Article' do
       f.input :title
       f.input :published_at
-      f.rich_text_area :content
+      li do
+        label :content, class: 'trix-editor-label'
+        f.rich_text_area :content
+      end
     end
     f.actions
   end
