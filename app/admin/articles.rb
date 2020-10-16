@@ -5,6 +5,7 @@ ActiveAdmin.register Article do
     selectable_column
     id_column
     column :title
+    column :slug
     column :published_at
     column :created_at
     actions
@@ -17,7 +18,7 @@ ActiveAdmin.register Article do
   form do |f|
     f.inputs 'Article' do
       f.input :title
-      f.input :published_at
+      f.input :published_at, as: :datetime_picker
       li do
         label :content, class: 'trix-editor-label'
         f.rich_text_area :content
