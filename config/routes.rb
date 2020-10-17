@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   }
 
   ActiveAdmin.routes(self)
-  resources :articles, only: [:show]
+  resources :articles, only: [:index, :show]
 
   root 'static_pages#home'
 end

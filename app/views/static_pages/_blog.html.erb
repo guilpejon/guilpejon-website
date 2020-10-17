@@ -15,7 +15,7 @@
           <div class="item">
             <div class="post-img">
               <div class="img">
-                <%= link_to article_path(article.slug) do %>
+                <%= link_to article_path(article.slug), "data-turbolinks": "false" do %>
                   <%= image_tag(article.thumbnail.variant(resize_to_fill: [400, 0]), class: 'card-img-top') %>
                 <% end %>
               </div>
@@ -28,7 +28,7 @@
                   <%# <a href="#0"><span>06</span> Aug 2018</a> %>
                   <%# <a href="#0"><i class="icon pe-7s-ticket"></i> WordPress</a> %>
                 </div>
-                <h5><%= link_to article.title, article_path(article.slug) %></h5>
+                <h5><%= link_to article.title, article_path(article.slug), "data-turbolinks": "false" %></h5>
                 <%# <a href="#0"><%= article.description %1></a> %>
                 <%# <a href="#0" class="more"> %>
                   <%#   <span>Read More</span> %>
@@ -39,32 +39,5 @@
         </div>
       <% end %>
     </div>
-
-    <%# <% @articles.sample(2).each do |article| %1> %>
-    <%#   <div class="col-md-6"> %>
-      <%#     <div class="item mb-sm50"> %>
-        <%#       <div class="post-img"> %>
-          <%#         <div class="img"> %>
-            <%#           <%= image_tag(article.thumbnail.variant(resize_to_fill: [540, 0])) %1> %>
-            <%#           <%1# <img src="img/blog/1.jpg" alt=""> %1> %>
-            <%#         </div> %>
-          <%#       </div> %>
-        <%#       <div class="cont"> %>
-          <%#         <div class="info"> %>
-            <%#           <a href="#0"><em>By</em> Author</a> %>
-            <%#           <a href="#0"><span><%= article.published_at.day %1></span> <%= article.published_at.strftime("%b, %Y") %1></a> %>
-            <%#           <%1# <a href="#0"><span>06</span> Aug 2018</a> %1> %>
-            <%#           <%1# <a href="#0"><i class="icon pe-7s-ticket"></i> WordPress</a> %1> %>
-            <%#         </div> %>
-
-          <%#         <h4><a href="#0"><%= article.title %1></a></h4> %>
-
-          <%#         <a href="#0" class="more"> %>
-            <%#           <span>Read More</span> %>
-            <%#         </a> %>
-          <%#       </div> %>
-        <%#     </div> %>
-      <%#   </div> %>
-    <%# <% end %1> %>
-</div>
+  </div>
 </section>

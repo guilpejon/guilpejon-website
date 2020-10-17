@@ -1,5 +1,5 @@
 ActiveAdmin.register Article do
-  permit_params :title, :content, :published_at, :thumbnail
+  permit_params :title, :content, :published_at, :thumbnail, :description
 
   index do
     selectable_column
@@ -18,6 +18,7 @@ ActiveAdmin.register Article do
   form do |f|
     f.inputs 'Article' do
       f.input :title
+      f.input :description
       f.input :published_at, as: :datetime_picker
       f.input :thumbnail, as: :file
       li do
@@ -31,6 +32,8 @@ ActiveAdmin.register Article do
   show do
     attributes_table do
       row :title
+      row :description
+      row :published_at
       row :content do
         div resource.content
       end

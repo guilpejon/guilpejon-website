@@ -1,0 +1,17 @@
+<% content_for :meta_title, "#{@article.title} | #{DEFAULT_META[:meta_title]}" %>
+<% content_for :meta_description, "#{@article.description} | #{DEFAULT_META[:meta_description]}" %>
+<% content_for :meta_type, "article" %>
+<% content_for :meta_image, "#{polymorphic_url(@article.thumbnail)}" %>
+<% content_for :meta_author, "Guilherme Pejon" %>
+
+<div class="container mt-4">
+  <%# <img class="card-img-top img-fluid" src="<%= url_for(@article.thumbnail) %1>" alt=""> %>
+
+  <h1 class="mt-5 article-title"><%= @article.title %></h1>
+  <h4 class="article-description"><%= @article.description %></h4>
+
+  <%= @article.content %>
+
+  <%# <br> %>
+  <%# <%= render 'layouts/disqus' %1> %>
+</div>
