@@ -15,7 +15,7 @@
             <div class="post-img">
               <div class="img">
                 <%= link_to article_path(article.slug), "data-turbolinks": "false" do %>
-                  <%= image_tag(article.thumbnail.variant(resize_to_fill: [400, 0]), class: 'card-img-top') %>
+                  <%= image_tag(article.thumbnail.variant(resize_to_fill: [350, 0]), class: 'card-img-top') %>
                 <% end %>
               </div>
             </div>
