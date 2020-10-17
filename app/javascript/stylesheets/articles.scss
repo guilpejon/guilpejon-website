@@ -14,10 +14,11 @@
   letter-spacing: .01rem;
   font-weight: 300;
   font-style: normal;
-  font-size: 21px;
+  font-size: 1.25rem;
   line-height: 1.58;
   letter-spacing: -.003em;
   color: $light-black;
+  margin-bottom: 3rem;
 
   h1 {
     font-size: 1.5em;
@@ -106,14 +107,16 @@
   }
 }
 
-@include media-breakpoint-up(xs) {
+@include media-breakpoint-down(sm) {
   .trix-content {
-    font-size: 18px;
+    font-size: 1rem;
   }
-}
-
-@include media-breakpoint-up(xs) {
-  .trix-content {
-    font-size: 21px;
+  .articles-show {
+    h1 {
+      font-size: 2rem;
+    }
+    h4 {
+      font-size: 1.1rem;
+    }
   }
 }

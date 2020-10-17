@@ -178,3 +178,9 @@
     padding: 0.5rem;
   }
 }
+
+@include media-breakpoint-up(sm) {
+  .card-body{
+    padding: 1.25rem;
+  }
+}
