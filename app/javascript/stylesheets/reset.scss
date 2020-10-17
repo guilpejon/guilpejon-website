@@ -1,5 +1,8 @@
 a {
-  color: rgba(0, 0, 0, 0.7)
+  color: rgba(0, 0, 0, 0.7);
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 @include media-breakpoint-up(xs) {
