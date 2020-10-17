@@ -568,9 +568,13 @@ a:hover {
     color: #fff;
 }
 
+#art .img-thumbnail {
+  border: none;
+}
+
 .grid-item {
     position: relative;
-    padding: 15px;
+    // padding: 5px;
 }
 
 .work_box {

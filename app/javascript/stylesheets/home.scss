@@ -1,3 +1,7 @@
+/*===========================
+        ABOVE THE FOLD
+=============================*/
+
 .header-table-center {
   .first-title {
     font-weight: 400;
@@ -11,6 +15,7 @@
 .modal-body {
   text-align: center !important;
 }
+
 .spinner-border {
   margin: 50px;
   width: 2.5rem;
@@ -35,9 +40,9 @@
   }
 }
 
-//
-// TYPEWRITER EFFECT BEGINS
-//
+/*===========================
+        TYPEWRITER EFFECT
+=============================*/
 
 #text {
 	display: inline-block;
@@ -63,6 +68,107 @@
 	}
 }
 
-//
-// TYPEWRITER EFFECT ENDS
-//
+/*===========================
+        BLOG
+=============================*/
+
+.section-padding{
+	padding: 140px 0;
+}
+
+.bg-gray{
+	background: #fbfbfb !important;
+}
+
+.blog{
+	.item{
+		.post-img{
+			.img{
+				overflow: hidden;
+			}
+
+			&:hover{
+				img{
+					transform: scale(1.1,1.1);
+				}
+			}
+
+			img{
+				transition: all .5s;
+			}
+		}
+
+		.cont{
+			position: relative;
+			// padding: 50px;
+			background: #fff;
+      padding: 10px;
+			// width: 80%;
+			// margin-left: 10%;
+			// margin-top: -50px;
+			transition: all .4s;
+
+      h5 {
+        text-align: left;
+        a{
+          transition: color 0.2s ease;
+        }
+      }
+		}
+
+		.info{
+			margin-bottom: 50px;
+			padding-top: 15px;
+			position: relative;
+
+			&:after{
+				content: '';
+				width: 30px;
+				height: 1px;
+				background: #000;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+			span{
+				color: #999;
+				font-size: 11px;
+				text-transform: uppercase;
+				font-weight: 500;
+				margin-right: 10px;
+
+				&:first-of-type{
+					float: left;
+        }
+
+				&:last-of-type{
+					margin-right: 0;
+					float: right;
+					color: #555;
+				}
+
+				i,em{
+					margin-right: 5px;
+				}
+
+				em{
+					color: #555;
+				}
+			}
+		}
+
+		h4{
+			font-weight: 700;
+			line-height: 1.7;
+			margin-bottom: 30px;
+		}
+
+		.more{
+			color: #333;
+			font-size: 13px;
+			font-weight: 600;
+			border-bottom: 1px solid #ccc;
+		}
+	}
+}

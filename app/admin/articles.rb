@@ -1,5 +1,5 @@
 ActiveAdmin.register Article do
-  permit_params :title, :content, :published_at
+  permit_params :title, :content, :published_at, :thumbnail
 
   index do
     selectable_column
@@ -19,6 +19,7 @@ ActiveAdmin.register Article do
     f.inputs 'Article' do
       f.input :title
       f.input :published_at, as: :datetime_picker
+      f.input :thumbnail, as: :file
       li do
         label :content, class: 'trix-editor-label'
         f.rich_text_area :content
