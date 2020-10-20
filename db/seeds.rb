@@ -14,7 +14,7 @@ if Rails.env.development?
   3.times do
     article = Article.new(
       title: Faker::Movie.title,
-      published_at: rand(10).days.from_now,
+      published_at: rand(10).days.ago,
       description: '',
       content: Faker::Lorem.paragraph_by_chars(number: 512)
     )
@@ -34,5 +34,19 @@ if Rails.env.development?
     image_name = Faker::GreekPhilosophers.name
     project.thumbnail.attach(io: downloaded_image, filename: "#{image_name}.jpg")
     project.save!
+  end
+
+  6.times do
+    video = Video.new(
+      title: Faker::Movie.title,
+      description: Faker::Quote.matz,
+      youtube_id: rand(36**7).to_s(36),
+      published_at: rand(90).days.ago,
+      kind: 0
+    )
+    downloaded_image = open(Faker::LoremFlickr.image)
+    image_name = Faker::GreekPhilosophers.name
+    video.thumbnail.attach(io: downloaded_image, filename: "#{image_name}.jpg")
+    video.save!
   end
 end

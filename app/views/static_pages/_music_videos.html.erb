@@ -1,0 +1,40 @@
+<section class="section text-center blog section-padding bg-gray" data-scroll-index="7">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-12">
+        <div class="text-center">
+          <h2>Music Videos</h2>
+          <p class="text-muted mx-auto section-subtitle mt-3">Music covers performed with the help of my sister and my friends.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="album py-2">
+      <div class="row">
+        <% @videos.each do |video| %>
+          <div class="col-md-6 col-lg-4">
+            <%= link_to video_url(video) do %>
+              <div class="col-sm d-flex">
+                <div class="card mb-4 shadow-sm flex-fill">
+                  <%= image_tag video.thumbnail, class: 'card-img-top' %>
+                  <div class="card-body d-flex">
+                    <p class="card-text flex-fill"><%= video.title %></p>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+
+    <div class="row mt-3">
+      <ul class="col list-unstyled list-inline mb-4 work_menu">
+        <li class="list-inline-item">
+          <%= link_to "MORE MUSIC VIDEOS", videos_path, 'data-turbolinks': 'false' %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

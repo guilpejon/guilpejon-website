@@ -173,6 +173,23 @@
 	}
 }
 
+/*===========================
+        PROJECTS
+=============================*/
+
+#projects .img-thumbnail {
+  border-radius: 50%;
+  border: none;
+}
+
+/*===========================
+        ART
+=============================*/
+
+#art .img-thumbnail {
+  border: none;
+}
+
 @include media-breakpoint-up(xs) {
   .card-body{
     padding: 0.5rem;

@@ -61,3 +61,7 @@ gem "activeadmin"
 gem "devise"
 
 gem 'faker', git: 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+
+gem "friendly_id", "~> 5.4"
+
+gem "yt"
