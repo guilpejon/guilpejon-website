@@ -190,6 +190,12 @@
   border: none;
 }
 
+@media (hover: none) {
+  .social-icon {
+     background-color: none;
+   }
+}
+
 @include media-breakpoint-up(xs) {
   .card-body{
     padding: 0.5rem;

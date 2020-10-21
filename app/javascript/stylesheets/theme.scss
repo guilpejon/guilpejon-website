@@ -317,6 +317,23 @@ a:hover {
     background-color: orange; // #e65f78;
 }
 
+.work_menu a.active,
+.work_menu a:hover {
+    color: #fff;
+}
+
+@media (hover: none) {
+  .work_menu a.active {
+    background-color: orange !important;
+    color: white !important;
+  }
+
+  .work_menu a:hover {
+    background-color: transparent;
+    color: black;
+  }
+}
+
 .btn-custom:hover,
 .btn-custom:focus,
 .btn-custom:active,
@@ -561,11 +578,6 @@ a:hover {
     padding: 6px 16px;
     transition: all 0.5s;
     margin-top: 5px;
-}
-
-.work_menu a.active,
-.work_menu a:hover {
-    color: #fff;
 }
 
 .grid-item {
