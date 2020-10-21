@@ -7,10 +7,10 @@ $(document).on('turbolinks:load', function() {
         layoutMode: 'masonry'
       });
 
-      var iso = new Isotope('.project-grid', {
-        itemSelector: '.grid-item',
-        layoutMode: 'masonry'
-      });
+      // var iso = new Isotope('.project-grid', {
+      //   itemSelector: '.grid-item',
+      //   layoutMode: 'masonry'
+      // });
 
       // bind filter button click
       $('#image-orientation-filters').on( 'click', 'a', function() {

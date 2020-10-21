@@ -8,9 +8,9 @@
         </div>
       </div>
     </div>
-    <div class="project-grid no-gutters">
+    <div class="row">
       <% @projects.each do |project| %>
-        <%= link_to url_for(project.thumbnail.variant(resize_to_fill: [800,0])), class: "col-lg-3 col-md-4 col-6 grid-item", data: { toggle: "lightbox", gallery: "projects-gallery", footer: "#{render partial: 'static_pages/projects_modal', locals: { project: project }}" } do %>
+        <%= link_to url_for(project.thumbnail.variant(resize_to_fill: [800,0])), class: "col-lg-3 col-md-4 grid-item", data: { toggle: "lightbox", gallery: "projects-gallery", footer: "#{render partial: 'static_pages/projects_modal', locals: { project: project }}" } do %>
           <%= image_tag(project.thumbnail.variant(resize_to_fill: [270, 270]), class: " img-thumbnail") %>
           <div class="gallery-image-item-overlay"></div>
         <% end %>
