@@ -9,4 +9,8 @@ class Video < ApplicationRecord
   friendly_id :title, use: [:slugged]
 
   enum kind: { music: 0, tech: 1 }
+
+  def url
+    "https://www.youtube.com/watch?v=#{youtube_id}"
+  end
 end

@@ -10,8 +10,8 @@
     </div>
     <div class="project-grid no-gutters">
       <% @projects.each do |project| %>
-        <%= link_to url_for(project.thumbnail.variant(resize_to_fill: [1000,0])), class: "col-lg-4 col-md-4 col-6 grid-item", data: { toggle: "lightbox", gallery: "projects-gallery", footer: "#{render partial: 'static_pages/projects_modal', locals: { project: project }}" } do %>
-          <%= image_tag(project.thumbnail.variant(resize_to_fill: [360, 360]), class: " img-thumbnail") %>
+        <%= link_to url_for(project.thumbnail.variant(resize_to_fill: [800,0])), class: "col-lg-3 col-md-4 col-6 grid-item", data: { toggle: "lightbox", gallery: "projects-gallery", footer: "#{render partial: 'static_pages/projects_modal', locals: { project: project }}" } do %>
+          <%= image_tag(project.thumbnail.variant(resize_to_fill: [270, 270]), class: " img-thumbnail") %>
           <div class="gallery-image-item-overlay"></div>
         <% end %>
       <% end %>
