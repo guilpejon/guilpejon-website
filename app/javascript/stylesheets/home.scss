@@ -3,7 +3,7 @@
 =============================*/
 
 @include media-breakpoint-down(sm) {
-  .work_menu a {
+  .static_pages-home .work_menu a {
     background-color: orange;
     color: white !important;
   }

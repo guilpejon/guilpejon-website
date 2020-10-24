@@ -1,6 +1,5 @@
 <nav class="navbar navbar-expand-lg fixed-top custom-nav sticky mt-0">
   <div class="container">
-
     <%= link_to "GUILPEJON", root_path, class: "navbar-brand pt-0 pb-0" %>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,9 +25,12 @@
         <li class="nav-item">
           <%= link_to "Blog", articles_path, class: "nav-link", "data-turbolinks": "false" %>
         </li>
-        <%# <li class="nav-item"> %>
-        <%#   <a class="nav-link" href="#contact">Contact</a> %>
-        <%# </li> %>
+        <li class="nav-item">
+          <%= link_to "Videos", videos_path, class: "nav-link", "data-turbolinks": "false" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contact", root_path(anchor: "contact"), class: "nav-link", "data-turbolinks": "false" %>
+        </li>
       </ul>
     </div>
   </div>
