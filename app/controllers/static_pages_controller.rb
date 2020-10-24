@@ -4,6 +4,5 @@ class StaticPagesController < ApplicationController
     @articles = Article.where("published_at < ?", Time.zone.now).order(published_at: :desc).limit(3)
     @projects = Project.limit(3)
     @videos = Video.limit(6)
-    @contact = Contact.new
   end
 end

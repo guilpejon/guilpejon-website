@@ -11,7 +11,7 @@
     <div class="row mt-5">
       <div class="col-lg-12">
         <div class="form-kerri">
-          <%= form_for @contact do |f| %>
+          <%= form_with(url: send_contact_email_path, action: :post) do |f| %>
             <%= recaptcha_v3(action: "contact") %>
             <div class="row">
               <div class="col-lg-6">
@@ -39,7 +39,6 @@
                 </div>
               </div>
             </div>
-            <%= f.hidden_field :nickname %>
             <div class="row">
               <div class="col-lg-12 text-right">
                 <%= f.submit 'Send Message', class: "btn btn-custom" %>

@@ -1,9 +1,7 @@
 class ContactsController < ApplicationController
-  def create
-    @contact = Contact.new(params[:contact])
-    @contact.request = request
-
-    if verify_recaptcha(action: 'contact', minimum_score: 0.5) && @contact.deliver
+  def send_email
+    if verify_recaptcha(action: 'contact', minimum_score: 0.5)
+      ContactMailer.with(message: "teste").contact_email.deliver_later
       flash.now[:error] = nil
       redirect_to root_path, notice: 'Message sent successfully!'
     else

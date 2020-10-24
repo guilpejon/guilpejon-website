@@ -66,6 +66,4 @@ gem "friendly_id", "~> 5.4"
 
 gem "yt"
 
-gem "mail_form"
-
 gem "recaptcha", "~> 5.6"
