@@ -1,4 +1,15 @@
 /*===========================
+        HOME
+=============================*/
+
+@include media-breakpoint-down(sm) {
+  .work_menu a {
+    background-color: orange;
+    color: white !important;
+  }
+}
+
+/*===========================
         ABOVE THE FOLD
 =============================*/
 
@@ -189,6 +200,15 @@
 #art .img-thumbnail {
   border: none;
 }
+
+/*===========================
+        CONTACT
+=============================*/
+
+#contact {
+  padding-bottom: 0px;
+}
+
 
 @media (hover: none) {
   .social-icon {

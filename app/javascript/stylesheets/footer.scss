@@ -1,0 +1,11 @@
+.page-footer {
+  font-size: 0.8rem;
+  border-top: 1px solid rgba(156,156,156, 0.2);
+  margin-top: 100px;
+}
+
+@include media-breakpoint-down(sm) {
+  .page-footer {
+    margin-top: 0;
+  }
+}

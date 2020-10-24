@@ -1,0 +1,33 @@
+.alert{
+  z-index: 9;
+  position: fixed;
+
+  &.alert-success {
+    background: orange;
+    border: darken(orange, 25%);
+    color: rgba(255, 255, 255, 85%);
+  }
+}
+
+.alert-dismissible .close {
+  opacity: 0.75;
+  line-height: 0.95;
+  &:hover{
+    opacity: 1 !important;
+    color: white;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .alert {
+    top: 10%;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .alert{
+    top: 15%;
+    left: 25%;
+    transform: translate(-50%, -100%);
+  }
+}

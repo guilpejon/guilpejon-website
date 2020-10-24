@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :articles, only: [:index, :show], path: :blog
   resources :images, only: [:index]
   resources :videos, only: [:index, :show]
+  resources :contacts, only: [:create]
 
   root 'static_pages#home'
 end

@@ -13,7 +13,7 @@
       <div class="row">
         <% @videos.each do |video| %>
           <div class="col-md-6 col-lg-4">
-            <%= link_to video.url, data: { toggle: "lightbox", gallery: "youtube" } do %>
+            <%= link_to video.url, data: { toggle: "lightbox", gallery: "youtube", width: "800" } do %>
               <div class="col-sm d-flex">
                 <div class="card mb-4 shadow-sm flex-fill">
                   <%= image_tag video.thumbnail, class: 'card-img-top' %>

@@ -14,6 +14,7 @@
   </head>
 
   <body>
+    <%= render "layouts/alerts" %>
     <main class="<%= controller.controller_name %>-<%= controller.action_name %>">
       <%= render 'layouts/navbar' %>
       <%= yield %>

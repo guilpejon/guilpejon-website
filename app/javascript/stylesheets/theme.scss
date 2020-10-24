@@ -136,6 +136,13 @@ a:hover {
     background-color: #fff;
 }
 
+@include media-breakpoint-down(sm) {
+  section {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+}
+
 .h-100vh {
     height: 100vh;
 }
@@ -305,7 +312,7 @@ a:hover {
 .btn-custom,
 .form-kerri .form-control:focus,
 .about-social li a:hover {
-    border-color: #e65f78;
+    border-color:  orange;
 }
 
 .btn-custom,
@@ -343,8 +350,8 @@ a:hover {
 .btn-custom:focus,
 .btn-custom:hover,
 .open > .dropdown-toggle.btn-custom {
-    background-color: #d8576f;
-    border-color: #d8576f;
+    background-color: darken(#ffbb3e, 17%);
+    border-color: darken(#ffbb3e, 17%);
 }
 
 .header-bg-img {
