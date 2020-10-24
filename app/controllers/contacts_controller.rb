@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
       flash[:success] = 'Message sent successfully!'
       redirect_to root_path
     else
-      flash[:error] = 'Failed to send message =/'
+      flash[:error] = 'Failed to send the message.'
       redirect_to root_path
     end
   end

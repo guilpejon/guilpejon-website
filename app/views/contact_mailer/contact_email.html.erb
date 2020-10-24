@@ -5,8 +5,8 @@
   </head>
   <body>
     <h1>New contact message by <%= @name %></h1>
-    <p>
-      <%= @message %>
-    </p>
+    <% @message.split("\n").each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
   </body>
 </html>
