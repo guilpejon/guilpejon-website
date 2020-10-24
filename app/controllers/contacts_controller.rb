@@ -6,11 +6,11 @@ class ContactsController < ApplicationController
         email: params[:email],
         subject: params[:subject],
         message: params[:message],
-      ).contact_email.deliver_later
-      flash.now[:error] = nil
-      redirect_to root_path, notice: 'Message sent successfully!'
+      ).contact_email.deliver_later if Rails.env.production?
+      flash[:success] = 'Message sent successfully!'
+      redirect_to root_path
     else
-      flash.now[:error] = 'Cannot send message.'
+      flash[:error] = 'Failed to send message =/'
       redirect_to root_path
     end
   end
