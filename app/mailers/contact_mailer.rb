@@ -4,7 +4,7 @@ class ContactMailer < ApplicationMailer
     @name = params[:name]
     mail(
       to: Rails.application.credentials.dig(:personal_email),
-      subject: params[:subject],
+      subject: "[GuilPejon] #{params[:subject]}",
       reply_to: params[:email]
     )
   end
