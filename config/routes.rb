@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   resources :articles, only: %i[index show], path: :blog
   resources :images, only: %i[index]
-  resources :videos, only: %i[index show]
+  resources :musics, only: %i[index show]
   post 'send_contact_email', to: 'contacts#send_email'
 
   root 'static_pages#home'
