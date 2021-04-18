@@ -5,4 +5,6 @@ class StaticPagesController < ApplicationController
     @projects = Project.limit(3)
     @videos = Video.limit(6)
   end
+
+  def contact; end
 end

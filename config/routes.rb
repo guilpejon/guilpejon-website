@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :images, only: %i[index]
   resources :musics, only: %i[index show]
   post 'send_contact_email', to: 'contacts#send_email'
+  get 'contact', to: 'static_pages#contact'
 
   root 'static_pages#home'
 end
