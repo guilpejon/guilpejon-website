@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
   def send_email
-    if verify_recaptcha(action: 'contact', minimum_score: 0.5)
+    if verify_recaptcha(action: 'contact', minimum_score: ENV["GOOGLE_RECAPTCHA_MINIMUM_SCORE"])
       ContactMailer.with(
         name: params[:name],
         email: params[:email],
