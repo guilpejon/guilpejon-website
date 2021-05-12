@@ -191,6 +191,13 @@
 #projects .img-thumbnail {
   border-radius: 50%;
   border: none;
+  width: 100%;
+}
+
+@include media-breakpoint-down(sm) {
+  #projects .img-thumbnail {
+    width: 50%;
+  }
 }
 
 /*===========================
