@@ -17,11 +17,12 @@
                     <%= link_to "https://www.github.com/guilpejon", class: "ins-ic", target: "_blank", title: "Public Code Repositories" do %>
                       <i class="social-icon fab fa-github white-text"> </i>
                     <% end %>
+                    <%= link_to "", class: "", title: "Paintings for Sale", data: { toggle: "modal", target: "#storeModal" } do %>
+                      <i class="social-icon far fa-images white-text"> </i>
+                    <% end %>
+                    <%= render 'images/image_store_modal' %>
                     <%= link_to "https://medium.com/@guilpejon", class: "ins-ic", target: "_blank", title: "Tech Articles" do %>
                       <i class="social-icon fab fa-medium white-text"> </i>
-                    <% end %>
-                    <%= link_to "https://www.inprnt.com/canvas/guilpejon", class: "ins-ic", target: "_blank", title: "Paintings for Sale" do %>
-                      <i class="social-icon far fa-images white-text"> </i>
                     <% end %>
                     <%# <%= link_to "https://www.linkedin.com/in/guilpejon", class: "ins-ic", target: "_blank" do %1> %>
                     <%#   <i class="social-icon fab fa-linkedin white-text"> </i> %>
